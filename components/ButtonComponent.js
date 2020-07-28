@@ -1,10 +1,12 @@
 import React from 'react';
 import {Button,View,StyleSheet} from 'react-native';
 
+import CustomButton from './CustomButton';
+
 const ButtonCompoent = (props) =>{
     return(
         <View style={styles.field}>
-                <Button title={props.text}/>
+                <CustomButton text={[props.text]} button={{width:165,marginTop:10   ,backgroundColor: "#0069FF"}}/>
         </View>
         
     )

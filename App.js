@@ -3,6 +3,8 @@ import {createStore,combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import { StyleSheet, Text, View,TextInput } from 'react-native';
 
+import Navigation from './Navigator/Navigation';
+
 import CreateScreen from './components/CreateScreen';
 import createScreenReducer from './store/reducer/createScreenReducer'
 
@@ -16,9 +18,7 @@ export default function App() {
   let val
   return (
     <Provider store={store}>
-    <View style={styles.container}>
-        <CreateScreen/>
-    </View>
+    <Navigation/>
     </Provider>
   );
 }

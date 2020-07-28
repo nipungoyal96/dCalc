@@ -184,7 +184,9 @@ const CreateScreen = (props) =>{
     }
     return(
         <View style={styles.container}>
+          <CustomButton text="play" onSelect={()=> props.navigation.navigate('PlayScreen')} button={{width:120,marginTop:50,backgroundColor: "#0069FF"}}/>
           <View style={{marginTop:150,alignItems:"center"}}>
+            
           <FlatList data={fieldsValue} keyExtractor={item => item.order.toString()} renderItem={itemData=>
             <DisplayedComponents data={itemData.item}/>
           }/>
@@ -210,7 +212,7 @@ const CreateScreen = (props) =>{
                  
                     <CustomButton  text="Cancel" onSelect={()=>{setModalVisible(false)}} button={{width:300,marginTop:30,backgroundColor: "#FF0000"}}/>
                     </View>
-                 
+                  
                 :null}
                 { step===21 ? <View>
                   <CustomButton  text="Text Box" onSelect={()=>{setStep(311)}} button={{width:300,marginTop:30,backgroundColor: "#0069FF"}}/>
